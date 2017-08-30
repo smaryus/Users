@@ -8,28 +8,28 @@
 
 import Foundation
 
-private struct Constants {
-    static let idKey = "id"
-    static let nameKey = "name"
-    static let userNameKey = "username"
-    static let emailKey = "email"
-    static let addressKey = "address"
-    static let streetKey = "street"
-    static let suiteKey = "suite"
-    static let cityKey = "city"
-    static let zipCodeKey = "zipcode"
-    static let geoKey = "geo"
-    static let latKey = "lat"
-    static let lngKey = "lng"
-    static let phoneKey = "phone"
-    static let websiteKey = "website"
-    static let companyKey = "company"
-    static let companyNameKey = "name"
-    static let catchPhraseKey = "catchPhrase"
-    static let bsKey = "bs"
-}
-
 final class UserInfo {
+    private struct Constants {
+        static let idKey = "id"
+        static let nameKey = "name"
+        static let userNameKey = "username"
+        static let emailKey = "email"
+        static let addressKey = "address"
+        static let streetKey = "street"
+        static let suiteKey = "suite"
+        static let cityKey = "city"
+        static let zipCodeKey = "zipcode"
+        static let geoKey = "geo"
+        static let latKey = "lat"
+        static let lngKey = "lng"
+        static let phoneKey = "phone"
+        static let websiteKey = "website"
+        static let companyKey = "company"
+        static let companyNameKey = "name"
+        static let catchPhraseKey = "catchPhrase"
+        static let bsKey = "bs"
+    }
+    
     struct Address {
         let city: String
         let zipCode: String
