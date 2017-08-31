@@ -8,12 +8,13 @@
 
 import UIKit
 
-class UserPostsTableViewController: UITableViewController {
+final class UserPostsTableViewController: UITableViewController {
 
+    // current displayed user info
     var userInfo: UserInfo! {
         didSet(value) {
             assert(self.userInfo != nil)
-            
+
             self.dataSource.fetchPosts(for: self.userInfo) { [weak self] (results, error) in
                 guard let `self` = self else { return }
                 self.tableView.reloadData()
@@ -33,6 +34,10 @@ class UserPostsTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 100
 
          self.clearsSelectionOnViewWillAppear = false
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.title = self.userInfo?.name
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,15 +69,4 @@ class UserPostsTableViewController: UITableViewController {
 
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -12,7 +12,7 @@ private struct Constants {
     static let usersListStringUrl = "https://jsonplaceholder.typicode.com/users"
 }
 
-class UsersViewController: UITableViewController {
+final class UsersViewController: UITableViewController {
 
     private var detailViewController: UserPostsTableViewController? = nil
 

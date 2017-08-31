@@ -16,9 +16,17 @@ class UserPost {
         static let bodyKey = "body"
     }
 
+
+    /// id of the user that posted
     let userId: Int
+
+    /// Post id
     let postId: Int
+
+    /// Post title
     let title: String
+
+    /// Post body
     let body: String
 
     init?(json: [String: Any]) {

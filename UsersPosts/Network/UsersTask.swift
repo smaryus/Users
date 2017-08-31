@@ -10,6 +10,7 @@ import Foundation
 
 class UsersTask: BaseTask {
 
+    // Parses the data received and retuns an array of [UserInfo]
     override func parseData(data: Data) -> [Any]? {
         // try to parse the response
         guard let jsonObject = (try? JSONSerialization.jsonObject(with: data)) as? [Any] else {

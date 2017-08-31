@@ -8,11 +8,15 @@
 
 import Foundation
 
-class UserPostDataSource {
+final class UserPostDataSource {
 
+    /// User posts list
     private(set) var results: [UserPost] = []
+
+    /// Last server request error
     private(set) var error: Error? = nil
 
+    // base url string. At this will be added the user id for which to make the next call
     private let baseUrlString: String
 
     private var task: Task? = nil
@@ -23,6 +27,12 @@ class UserPostDataSource {
         self.userPostsTaskClass = userPostsTaskClass
     }
 
+    /// Fetch async posts for a user
+    ///
+    /// - Parameters:
+    ///   - user: user information for whom to make the request
+    ///   - completion: called after fetch completed
+    /// - Returns: Retuns true if fetch started and false otherwise
     @discardableResult
     func fetchPosts(for user: UserInfo,
                     completion: ((_ results: [UserPost]?, _ error: Error?) -> Void)?) -> Bool {

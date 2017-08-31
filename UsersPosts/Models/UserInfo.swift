@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class UserInfo {
+struct UserInfo {
     private struct Constants {
         static let idKey = "id"
         static let nameKey = "name"
@@ -45,13 +45,28 @@ final class UserInfo {
         let bs: String
     }
 
+    /// User id
     let id: Int
+
+    /// First and last name
     let name: String
+
+    /// User name
     let userName: String
+
+    /// Email address
     let email: String
+
+    /// Address if exists
     let address: Address?
+
+    /// Phone number if exists
     let phone: String
+
+    /// Web site
     let website: String
+
+    /// Company informations
     let company: Company?
 
     init?(jsonObject: [String: Any]) {

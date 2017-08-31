@@ -203,6 +203,7 @@
 				TargetAttributes = {
 					29CE87631F56C7ED0090EFD0 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = SGEKCR43WB;
 						ProvisioningStyle = Automatic;
 					};
 					29CE87791F56C7ED0090EFD0 = {
@@ -409,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SGEKCR43WB;
 				INFOPLIST_FILE = UsersPosts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = marius.UsersPosts;
@@ -421,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SGEKCR43WB;
 				INFOPLIST_FILE = UsersPosts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = marius.UsersPosts;

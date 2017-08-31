@@ -54,7 +54,7 @@ class BaseTask: Task {
         self.canceled = true
     }
 
-    // MARK - private methods
+    /// This must be override by subclasses
     internal func parseData(data: Data) -> [Any]? {
         fatalError()
     }
